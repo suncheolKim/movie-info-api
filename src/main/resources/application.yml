@@ -1,0 +1,24 @@
+spring:
+    application:
+        name: movie-info-api
+
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.1.20:3306/movieinfo
+        username: ${user}
+        password: ${password}
+
+    jpa:
+        hibernate:
+            ddl-auto: none
+
+
+logging:
+    level:
+        root: INFO
+        jdbc: OFF
+        jdbc.audit: OFF
+        jdbc.connection: OFF
+        jdbc.resultset: OFF
+        jdbc.resultsettable: INFO
+        jdbc.sqlonly: INFO
