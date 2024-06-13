@@ -22,10 +22,10 @@ public class SwaggerConfig {
     public OpenAPI springOpenApi() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("BulkOrderAPI")
+                        .title("MovieInfoAPI")
                         .version("v0.0.1")
-                        .description("Bulk Order API"))
+                        .description("Movie Info API"))
                 .externalDocs(new ExternalDocumentation()
-                        .description("Bulk Order API Documentation"));
+                        .description("Movie Info API Documentation"));
     }
 }
