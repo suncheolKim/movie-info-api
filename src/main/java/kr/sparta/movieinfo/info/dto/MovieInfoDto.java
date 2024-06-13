@@ -3,17 +3,19 @@ package kr.sparta.movieinfo.info.dto;
 import kr.sparta.movieinfo.info.model.MovieInfo;
 import lombok.Getter;
 
+import java.time.LocalDate;
+
 @Getter
 public class MovieInfoDto {
     private Long id;
     private String title;
     private String originalTitle;
-    private String year;
+    private Integer year;
     private String country;
     private String ageRatings;
     private String genre;
-    private String runtime;
-    private String releaseDate;
+    private Integer runtime;
+    private LocalDate releaseDate;
     private String director;
     private String description;
     private String actors;

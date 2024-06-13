@@ -3,6 +3,8 @@ package kr.sparta.movieinfo.info.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "movie_info")
 @Getter
@@ -18,7 +20,7 @@ public class MovieInfo {
     private String originalTitle;
 
     @Column
-    private String year;
+    private Integer year;
 
     @Column
     private String country;
@@ -30,10 +32,10 @@ public class MovieInfo {
     private String genre;
 
     @Column
-    private String runtime;
+    private Integer runtime;
 
     @Column
-    private String releaseDate;
+    private LocalDate releaseDate;
 
     @Column
     private String director;

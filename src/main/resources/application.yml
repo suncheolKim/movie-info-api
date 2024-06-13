@@ -6,8 +6,10 @@ spring:
         name: movie-info-api
 
     datasource:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/movieinfo
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        url: jdbc:mysql://localhost:3306/movieinfo
+        driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+        url: jdbc:log4jdbc:mysql://localhost:3306/movieinfo
         username: ${user}
         password: ${password}
 
@@ -18,3 +20,13 @@ spring:
     sql:
         init:
             mode: always
+
+logging:
+    level:
+        root: INFO
+        jdbc: OFF
+        jdbc.audit: OFF
+        jdbc.connection: OFF
+        jdbc.resultset: OFF
+        jdbc.resultsettable: INFO
+        jdbc.sqlonly: INFO
