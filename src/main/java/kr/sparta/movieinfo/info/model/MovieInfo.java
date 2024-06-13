@@ -1,9 +1,11 @@
 package kr.sparta.movieinfo.info.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
 
 @Entity
 @Table(name = "movie_info")
+@Getter
 public class MovieInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

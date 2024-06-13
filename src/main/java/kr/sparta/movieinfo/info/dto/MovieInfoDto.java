@@ -1,5 +1,6 @@
 package kr.sparta.movieinfo.info.dto;
 
+import kr.sparta.movieinfo.info.model.MovieInfo;
 import lombok.Getter;
 
 @Getter
@@ -16,4 +17,19 @@ public class MovieInfoDto {
     private String director;
     private String description;
     private String actors;
+
+    public MovieInfoDto(MovieInfo movieInfo) {
+        this.id = movieInfo.getId();
+        this.title = movieInfo.getTitle();
+        this.originalTitle = movieInfo.getOriginalTitle();
+        this.year = movieInfo.getYear();
+        this.country = movieInfo.getCountry();
+        this.ageRatings = movieInfo.getAgeRatings();
+        this.genre = movieInfo.getGenre();
+        this.runtime = movieInfo.getRuntime();
+        this.releaseDate = movieInfo.getReleaseDate();
+        this.director = movieInfo.getDirector();
+        this.description = movieInfo.getDescription();
+        this.actors = movieInfo.getActors();
+    }
 }
