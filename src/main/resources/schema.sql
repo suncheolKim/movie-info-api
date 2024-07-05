@@ -12,3 +12,25 @@ CREATE TABLE IF NOT EXISTS movie_info (
     description TEXT NOT NULL,
     actors VARCHAR(255) NOT NULL
 );
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE IF NOT EXISTS `user` (
+      id bigint auto_increment primary key,
+      name VARCHAR(255) NOT NULL,
+      password VARCHAR(255) NOT NULL,
+      roles VARCHAR(255)
+);
+
+DROP TABLE IF EXISTS `users`;
+create table users
+(
+    id       bigint auto_increment primary key,
+    email    varchar(255)           not null,
+    password varchar(255)           not null,
+    role     enum ('ADMIN', 'USER') not null,
+    username varchar(255)           not null,
+    constraint UK6dotkott2kjsp8vw4d0m25fb7
+        unique (email),
+    constraint UKr43af9ap4edm43mmtq01oddj6
+        unique (username)
+);
